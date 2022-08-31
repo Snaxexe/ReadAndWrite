@@ -21,6 +21,17 @@ namespace Amogus {
 		file.close();
 	}
 
+	void ReadFromFile()
+	{
+		std::string FileContent;
+		std::ifstream openFile("myFile.txt");
+		while (std::getline(openFile, FileContent))
+		{
+			std::cout << "This was written in the file: " << FileContent << "\n";
+		}
+		openFile.close();
+
+	}
 
 	std::string filepath1 = ("myFile.txt");
 }
@@ -32,4 +43,6 @@ int main()
 	Amogus::Print("sus");
 
 	Amogus::WriteToFile(Amogus::filepath1);
+
+	Amogus::ReadFromFile();
 }
