@@ -4,13 +4,14 @@
 
 namespace Amogus {
 
-
+	//Template print function
 	template <typename T>
 	void Print(T t)
 	{
 		std::cout << t << "\n";
 	}
 
+	//Writes to text file
 	void WriteToFile(std::string filepath)
 	{
 		std::ofstream file(filepath);
